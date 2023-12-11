@@ -42,6 +42,7 @@ console.log("titre professionnel :" + titreProfessionnel);
 
 let {hobbies: hobbiesTab} = profilUtilisateur;
 let [hobby1 = "non spécifié", hobby2 = "non spécifié", hobby3 = "non spécifié"] = profilUtilisateur.hobbies;
+
 console.log(hobby1 + ", " + hobby2 + ", " + hobby3);
 
 function afficherProfil(profilUtilisateur) {
