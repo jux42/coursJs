@@ -54,4 +54,3 @@ function afficherProfil(profilUtilisateur) {
 
 afficherProfil(profilUtilisateur);
 
-
