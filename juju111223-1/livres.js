@@ -1,6 +1,6 @@
 const livre1 ={
 
-    titre: "1984",
+    titre: "Animal Farm",
     auteur: "George Orwell",
     annee: "1949"
 
@@ -41,11 +41,17 @@ function addBook(collection, objetLivre)
     collection.push(objetLivre);
 }
 
-function deleteBookByTitle(collection,titreASupprimer ){
+function deleteBookByTitle(titreASupprimer ){
 
-    for (let i=0 ; i<collection.length ; i++)
-        if (collection[i].titre === titreASupprimer) collection.splice(collection[i].titre, 1)
+    for (let i=0 ; i<livres.length ; i++)
+        if (livres[i].titre === titreASupprimer) {
+            livres.splice(i,  1);
+        }
 }
+
+deleteBookByTitle("mangez des pommes");
+
+livres.forEach((item)=>console.log("toujours là : " + item.titre));
 
 function findBook(collection, titreATrouver){
 
