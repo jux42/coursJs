@@ -11,7 +11,7 @@ function sommeFor(number){
 let numberToPass = 100;
 console.log(sommeFor(numberToPass));
 
-let someArray = Array(72,2,3,4,5,6,7,8,9);
+let someArray = Array(1,2,3,4,5,6,7,8,9);
 
 
 function findElement(tab, num){
@@ -31,7 +31,7 @@ function findElement(tab, num){
    if (numberCheck === -1) console.log(numberCheck);
 }
 
-findElement(someArray, 72);
+findElement(someArray, 7);
 
 
 function rebours(number){
