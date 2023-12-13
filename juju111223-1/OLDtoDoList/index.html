@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+
+</head>
+<body>
+<script src="toDolist.js"></script>
+<input type="text" id="taskInput">
+<button  id="addTaskButton">Ajouter Tache</button>
+<ul id="taskList"></ul>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const addTaskButton = document.getElementById('addTaskButton');
+        const taskInput = document.getElementById('taskInput');
+        const taskList = document.getElementById('taskList');
+    });
+
+    let button = document.querySelector('button');
+    button.addEventListener("click", createTask);
+
+    function createTask() {
+        const taskInput = taskInput.value.trim();
+
+        if (taskInput !== '') {
+            const taskObject = document.createElement('li');
+            taskObject.textContent = taskInput;
+            taskObject.addEventListener('click', createTask);
+
+        }
+
+        function creatTask(event) {
+            const taskItem = event.target;
+            taskItem.classList.toggle('completed');
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

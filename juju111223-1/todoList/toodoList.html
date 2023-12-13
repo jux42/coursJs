@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To-Do List</title>
+</head>
+<body>
+
+<h1>to-do list</h1>
+
+<input type="text" id="taskInput">
+<button id="addTaskButton">Ajouter</button>
+
+<ul id="taskList"></ul>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const taskInput = document.getElementById('taskInput');
+        const addTaskButton = document.getElementById('addTaskButton');
+        const taskList = document.getElementById('taskList');
+
+
+        addTaskButton.addEventListener('click',  function () {
+            const taskText = taskInput.value.trim();
+
+            if (taskText !== '') {
+                const taskObject = document.createElement('li');
+                taskObject.textContent = taskText;
+                taskObject.addEventListener('click', function (e) {
+                    const taskObject = e.target;
+                    taskObject.textContent.toggle();
+                 });
+
+                const doneButton = document.createElement('button');
+                doneButton.textContent = 'fait';
+                doneButton.addEventListener('click',  function () {
+                taskObject.style.textDecoration = 'line-through';
+                });
+
+                const delButton = document.createElement('button');
+                delButton.textContent = 'Supprimer';
+                delButton.addEventListener('click',  function () {
+
+                    taskList.removeChild(taskObject);
+                });
+
+                taskObject.appendChild(delButton);
+                taskList.appendChild(taskObject);
+                taskObject.appendChild(doneButton);
+
+                taskInput.value = '';
+            }
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
+
