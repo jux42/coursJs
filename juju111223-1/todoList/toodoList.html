@@ -11,16 +11,18 @@
 <h1>to-do list</h1>
 
 <input type="text" id="taskInput">
+
 <button id="addTaskButton">Ajouter</button>
-
+    <div id="listZone">
 <ul id="taskList"></ul>
-
+</div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const taskInput = document.getElementById('taskInput');
         const addTaskButton = document.getElementById('addTaskButton');
         const taskList = document.getElementById('taskList');
+
 
 
         addTaskButton.addEventListener('click',  function () {
@@ -40,6 +42,13 @@
                 taskObject.style.textDecoration = 'line-through';
                 });
 
+                const delAllButton = document.createElement('button');
+                delAllButton.textContent = 'supprimer toutes les taches';
+                delAllButton.addEventListener(click, function ()
+                {
+                    taskObject.remove.
+                })
+                
                 const delButton = document.createElement('button');
                 delButton.textContent = 'Supprimer';
                 delButton.addEventListener('click',  function () {

@@ -1,0 +1,12 @@
+
+#img{
+    display: block;
+    height: 180px;
+}
+
+#pokemonInput, #fetchPokemon{
+    position: sticky;
+
+    top: 0;
+
+}
