@@ -1,7 +1,18 @@
 
-#img{
-    display: block;
-    height: 180px;
+div{
+    padding : 50px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+#pokemonInfo {
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
 }
 
 #pokemonInput, #fetchPokemon{
